@@ -3,6 +3,7 @@ package jagarcia.spring_data_jpa;
 import jagarcia.spring_data_jpa.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,4 +37,12 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     if no product entry is found, this method returns null
     * */
     Product findDistinctByName(String name);
+
+    /*
+    Return the products whose price is greater than give price as method parameter
+    @Param price
+    @Return
+    * */
+
+    List<Product> findByPriceGreaterThan(BigDecimal price);
 }
