@@ -72,4 +72,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     /* returns a products whose date created between start date and end date*/
     List<Product> findByDateCreatedBetween(LocalDateTime startDate, LocalDateTime endDate);
+
+    //returns list of products on multiple values
+    List<Product> findByNameIn(List<String> names);
 }

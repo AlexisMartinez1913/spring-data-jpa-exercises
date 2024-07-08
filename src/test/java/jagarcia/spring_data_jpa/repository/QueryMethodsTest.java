@@ -123,4 +123,12 @@ public class QueryMethodsTest {
             System.out.println(p.getLastUpdated());
         });
     }
+    @Test
+    void findByNameInMethod() {
+        List<Product> products = productRepository.findByNameIn(List.of("product 2", "product 3"));
+        products.forEach((product -> {
+            System.out.println(product.getName());
+            System.out.println(product.getPrice());
+        }));
+    }
 }
