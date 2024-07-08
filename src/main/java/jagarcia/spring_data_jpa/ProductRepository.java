@@ -75,4 +75,8 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     //returns list of products on multiple values
     List<Product> findByNameIn(List<String> names);
+
+    //limit query results
+    List<Product> findFirst2ByOrderByNameAsc();
+    List<Product> findTop2ByOrderByPriceDesc();
 }
