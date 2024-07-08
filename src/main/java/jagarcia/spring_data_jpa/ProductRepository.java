@@ -58,4 +58,9 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     @return
     * */
     List<Product> findByNameContaining(String name);
+
+    /*
+    return the products based on sql like condition
+    * */
+    List<Product> findByNameLike(String name);
 }
