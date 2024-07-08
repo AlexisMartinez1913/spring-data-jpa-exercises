@@ -65,7 +65,7 @@ class ProductRepositoryTest {
         product.setName("Product 2");
         product.setDescription("product 2 description");
         product.setSku("101ABC");
-        product.setPrice(new BigDecimal(400));
+        product.setPrice(new BigDecimal(300));
         product.setActive(true);
         product.setImageUrl("image2.png");
 

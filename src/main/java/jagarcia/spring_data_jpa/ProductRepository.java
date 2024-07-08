@@ -43,6 +43,12 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     @Param price
     @Return
     * */
-
     List<Product> findByPriceGreaterThan(BigDecimal price);
+
+    /*
+   Return the products whose price is LESS than give price as method parameter
+   @Param price
+   @Return
+   * */
+    List<Product> findByPriceLessThan(BigDecimal price);
 }
