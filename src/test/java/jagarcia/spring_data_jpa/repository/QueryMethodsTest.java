@@ -79,4 +79,13 @@ public class QueryMethodsTest {
             System.out.println(product.getPrice());
         }));
     }
+    @Test
+    void findByNameContainingMethod() {
+        List<Product> products = productRepository.findByNameContaining("product 2");
+        products.forEach((product -> {
+            System.out.println(product.getId());
+            System.out.println(product.getName());
+            System.out.println(product.getPrice());
+        }));
+    }
 }

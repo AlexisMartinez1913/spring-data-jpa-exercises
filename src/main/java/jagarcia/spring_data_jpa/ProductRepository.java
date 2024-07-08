@@ -51,4 +51,11 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
    @Return
    * */
     List<Product> findByPriceLessThan(BigDecimal price);
+
+    /*
+    Return the filtered the product that match the given text
+    @Param name
+    @return
+    * */
+    List<Product> findByNameContaining(String name);
 }
